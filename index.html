@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Sample</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"> -->
+     <style>
+        nav {
+            border-bottom: 1px solid black;
+        }
+
+        .crumbs ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .crumb {
+            display: inline-block;
+        }
+
+        .crumb a::after {
+            display: inline-block;
+            color: black;
+            content: ">";
+            font-size: 80%;
+            font-weight: bold;
+            padding: 0 3px;
+        }
+     </style>
+</head>
+<body>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="/">Home</a></li>
+            <li class="crumb"><a hx-get="/blog" hx-target="#content" hx-push-url="true" hx-trigger="click">Blog</a></li>
+            <li class="crumb"><a hx-get="/work" hx-target="#content" hx-push-url="true">Work</a></li>
+          </ol>
+    </nav>
+    <main>
+        <div id="content">
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+</body>
+</html>
