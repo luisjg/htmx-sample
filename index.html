@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTMX Sample</title>
+    <title>Home | HTMX Sample</title>
     <link rel="stylesheet" href="./style.css">
      <style>
         nav {
@@ -33,8 +33,8 @@
     <nav class="crumbs">
         <ol>
             <li class="crumb"><a href="/">Home</a></li>
-            <li class="crumb"><a hx-get="/blog" hx-target="#content" hx-push-url="true" hx-trigger="click">Blog</a></li>
-            <li class="crumb"><a hx-get="/work" hx-target="#content" hx-push-url="true">Work</a></li>
+            <li class="crumb"><a href="/blog" hx-get="/blog" hx-target="#content" hx-push-url="true" hx-trigger="click">Blog</a></li>
+            <li class="crumb"><a href="/work" hx-get="/work" hx-target="#content" hx-push-url="true">Work</a></li>
           </ol>
     </nav>
     <main>
