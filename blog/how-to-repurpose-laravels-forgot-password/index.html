@@ -1,6 +1,45 @@
-<title>Repurpose Laravel's Forgot Password | HTMX Sample</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repurpose Laravel's Forgot Password | luisjg.dev</title>
+    <link rel="stylesheet" href="/style.css">
+     <style>
+        nav {
+            border-bottom: 1px solid black;
+        }
 
-<h1 hx-swap-oob="innerHTML:#page-title">Repurpose Laravel's Forgot Password</h1>
+        .crumbs ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .crumb {
+            display: inline-block;
+        }
+
+        .crumb a::after {
+            display: inline-block;
+            color: black;
+            content: ">";
+            font-size: 80%;
+            font-weight: bold;
+            padding: 0 3px;
+        }
+     </style>
+</head>
+<body>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Home</a></li>
+            <li class="crumb"><a href="/blog" hx-get="/blog" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Blog</a></li>
+            <li class="crumb"><a href="/work" hx-get="/work" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Work</a></li>
+          </ol>
+    </nav>
+    <main>
+        <div id="content">
+            <h1 id="page-title">Repurpose Laravel's Forgot Password</h1>
 
 <center>
 <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/f_auto,q_auto:eco/luisjg/avif/1200px-LaravelLogo.avif" width="17%" alt="Laravel logo" title="Laravel logo">
@@ -172,3 +211,13 @@ class="sourceCode php"><code class="sourceCode php"><span id="cb10-1"><a href="#
 <hr />
 <p>Harnessing Laravel’s capabilities, you can now effortlessly provision
 users. Ready to tackle the frontend? Happy coding!</p>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+</body>
+</html>

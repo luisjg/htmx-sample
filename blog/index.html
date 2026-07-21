@@ -1,8 +1,57 @@
-<title>Blog | HTMX Sample</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | luisjg.dev</title>
+    <link rel="stylesheet" href="/style.css">
+     <style>
+        nav {
+            border-bottom: 1px solid black;
+        }
 
-<h1 id="page-title">Blog</h1>
+        .crumbs ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-<div id="blog-content">
-    <p><a href="/blog/csun-metalab" hx-get="/blog/csun-metalab" hx-target="#blog-content" hx-push-url="true">CSUN META+LAB experience</a></p>
-    <p><a href="/blog/how-to-repurpose-laravels-forgot-password" hx-get="/blog/how-to-repurpose-laravels-forgot-password" hx-target="#blog-content" hx-push-url="true">Repurpose Laravel's Forgot Password</a></p>
-</div>
+        .crumb {
+            display: inline-block;
+        }
+
+        .crumb a::after {
+            display: inline-block;
+            color: black;
+            content: ">";
+            font-size: 80%;
+            font-weight: bold;
+            padding: 0 3px;
+        }
+     </style>
+</head>
+<body>
+    <nav class="crumbs">
+        <ol>
+            <li class="crumb"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Home</a></li>
+            <li class="crumb"><a href="/blog" hx-get="/blog" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Blog</a></li>
+            <li class="crumb"><a href="/work" hx-get="/work" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Work</a></li>
+          </ol>
+    </nav>
+    <main>
+        <div id="content">
+            <h1 id="page-title">Blog</h1>
+
+            <div id="blog-content">
+                <p><a href="/blog/csun-metalab" hx-get="/blog/csun-metalab" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">CSUN META+LAB experience</a></p>
+                <p><a href="/blog/how-to-repurpose-laravels-forgot-password" hx-get="/blog/how-to-repurpose-laravels-forgot-password" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Repurpose Laravel's Forgot Password</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+</body>
+</html>
