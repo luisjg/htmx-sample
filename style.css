@@ -439,6 +439,11 @@ footer {
     .hero h1 { font-size: 2.75rem; }
     .nav-container { gap: 1rem; }
     .article-title { font-size: 2rem; }
+    .grid-listing {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 4rem;
+    }
     
     /* Show Hamburger */
     .mobile-menu-btn { display: block; }
