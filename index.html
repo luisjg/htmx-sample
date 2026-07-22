@@ -5,29 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | luisjg.dev</title>
     <link rel="stylesheet" href="/style.css">
-     <style>
-        nav {
-            border-bottom: 1px solid black;
-        }
-
-        .crumbs ol {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .crumb {
-            display: inline-block;
-        }
-
-        .crumb a::after {
-            display: inline-block;
-            color: black;
-            content: ">";
-            font-size: 80%;
-            font-weight: bold;
-            padding: 0 3px;
-        }
-     </style>
 </head>
 <body>
     <div class="container">
@@ -36,21 +13,21 @@
             <div class="logo"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">LUIS JG</a></div>
             <div class="nav-container">
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                <button class="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-controls="main-nav" aria-expanded="false">
                     <svg viewBox="0 0 24 24">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
                     </svg>
                 </button>
-                <nav class="crumbs">
+                <nav class="crumbs" id="main-nav">
                     <ol>
                         <li class="crumb"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Home</a></li>
                         <li class="crumb"><a href="/blog" hx-get="/blog" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Blog</a></li>
                         <li class="crumb"><a href="/work" hx-get="/work" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Work</a></li>
                       </ol>
                 </nav>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle Dark Mode">
                     <!-- Sun Icon (for Dark Mode) -->
                     <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none;">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -81,7 +58,8 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
-    <script src="./theme-logic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js" integrity="sha384-/TgkGk7p307TH7EXJDuUlgG3Ce1UVolAOFopFekQkkXihi5u/6OCvVKyz1W+idaz" crossorigin="anonymous"></script>
+    <script src="/nav.js"></script>
+    <script src="/theme-logic.js"></script>
 </body>
 </html>

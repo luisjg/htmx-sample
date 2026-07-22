@@ -116,7 +116,7 @@ header {
     gap: 2rem;
 }
 
-nav ul {
+.crumbs ol {
     list-style: none;
     display: flex;
     gap: 2rem;
@@ -124,13 +124,13 @@ nav ul {
     padding: 0;
 }
 
-nav a {
+.crumbs a {
     color: var(--text-muted);
     font-size: 0.95rem;
     font-weight: 600;
 }
 
-nav a:hover, nav a.active {
+.crumbs a:hover, .crumbs a.active {
     color: var(--accent-primary);
 }
 
@@ -408,6 +408,22 @@ nav a:hover, nav a.active {
     color: var(--accent-primary);
 }
 
+.content-image {
+    display: block;
+    width: 100%;
+    max-width: 48rem;
+    height: auto;
+    margin: 0 auto 2.5rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+.content-image--logo {
+    max-width: 12rem;
+    padding: 1rem;
+}
+
 /* --- FOOTER --- */
 footer {
     border-top: 1px solid var(--border-color);
@@ -428,7 +444,7 @@ footer {
     .mobile-menu-btn { display: block; }
 
     /* Mobile Nav Styles */
-    nav {
+    .crumbs {
         position: absolute;
         top: 100%;
         left: 0;
@@ -447,13 +463,13 @@ footer {
     }
 
     /* Visible State */
-    nav.mobile-visible {
+    .crumbs.mobile-visible {
         max-height: 300px; /* arbitrary large height */
         opacity: 1;
         padding: 1rem 0;
     }
 
-    nav ul {
+    .crumbs ol {
         display: flex;
         flex-direction: column;
         align-items: center;
