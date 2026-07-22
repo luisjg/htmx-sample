@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,23 +30,58 @@
      </style>
 </head>
 <body>
-    <nav class="crumbs">
-        <ol>
-            <li class="crumb"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Home</a></li>
-            <li class="crumb"><a href="/blog" hx-get="/blog" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Blog</a></li>
-            <li class="crumb"><a href="/work" hx-get="/work" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Work</a></li>
-          </ol>
-    </nav>
-    <main>
-        <div id="content">
+    <div class="container">
+        
+        <header>
+            <div class="logo"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">LUIS JG</a></div>
+            <div class="nav-container">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                    <svg viewBox="0 0 24 24">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <nav class="crumbs">
+                    <ol>
+                        <li class="crumb"><a href="/" hx-get="/" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Home</a></li>
+                        <li class="crumb"><a href="/blog" hx-get="/blog" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Blog</a></li>
+                        <li class="crumb"><a href="/work" hx-get="/work" hx-target="#content" hx-select="#content" hx-swap="outerHTML" hx-push-url="true">Work</a></li>
+                      </ol>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <!-- Sun Icon (for Dark Mode) -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Moon Icon (for Light Mode) -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <main>
+            <div id="content">
 
-        </div>
-    </main>
+            </div>
+        </main>
 
-    <footer>
+        <footer>
 
-    </footer>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+    <script src="./theme-logic.js"></script>
 </body>
 </html>
